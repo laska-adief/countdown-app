@@ -1,0 +1,126 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+section{
+    min-height: 100vh;
+    padding: 5rem;
+    background: url('./bg.jpg');
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+    position: relative;
+}
+
+section::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, .2);
+    pointer-events: none;
+    z-index: 1;
+}
+
+section h1{
+    margin-bottom: 2rem;
+}
+
+.container{
+    width: 80%;
+    margin: 1rem auto;
+    position: relative;
+    z-index: 1;
+}
+
+.input{
+    margin-bottom: 3rem;
+    cursor: pointer;
+}
+
+.date,
+button{
+    padding: .3rem 1rem;
+    border: 0;
+    outline: 0;
+    border-radius: 4px;
+    background: #fff0f0;
+    color: #222;
+    font-size: 1.2rem;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
+}
+
+
+
+button{
+    padding: .5rem 1rem;
+    background-color: rgb(108, 133, 207);
+    color: white;
+}
+
+.countdown{
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.box h1{
+    font-size: 6rem;
+    font-weight: 400;
+    margin-top: -1rem;
+}
+
+.box span{
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+footer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    color: rgb(199, 199, 199);
+}
+
+.socmed i{
+    margin-bottom: 1rem;
+    margin: 1rem .5rem;
+    color: rgb(199, 199, 199);
+    font-size: 1.2rem;
+}
+
+.socmed i:hover{
+    color: rgb(108, 133, 207);
+}
+
+@media screen and (max-width:430px) {
+    .container{
+        width: 100%;
+    }
+    .date{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:620px){
+    button {
+        margin-top: 1rem;
+    }
+
+    .countdown{
+        flex-wrap: wrap;
+    }
+}
